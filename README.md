@@ -6,7 +6,8 @@ This C program generates an array  randomly  and performs a Sequential Search  t
 #include <stdlib.h>
 #include <time.h>
 
-void Sequential_Search(int a[], int size, int Key) {
+void Sequential_Search(int a[], int size, int Key)
+{
     printf("\nSearch for key: %d\n", Key);
 
     clock_t startClock = clock();
@@ -14,9 +15,9 @@ void Sequential_Search(int a[], int size, int Key) {
 
     for (int i = 0; i < size; i++) {
     
-        double elapsed = (double)(clock() - startClock) / CLOCKS_PER_SEC;
+        double pass = (double)(clock() - startClock) / CLOCKS_PER_SEC;
 
-        printf("[%d] = %d  (%.3f sec )\n", i, a[i], elapsed);
+        printf("[%d] = %d  (%.3f sec )\n", i, a[i], pass);
 
         if (a[i] == Key) {
             printf("  MATCH FOUND!\n");
@@ -41,7 +42,8 @@ void Sequential_Search(int a[], int size, int Key) {
 
 }
 
-int main() {
+int main() 
+{
     int size = 10;
     int n = 1;  // number of searches
     int a[size];
